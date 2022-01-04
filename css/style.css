@@ -1,0 +1,28 @@
+@import "style.css";
+
+* {
+    outline: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.main {
+    height: 100%;
+    width: 100%;
+}
+
+.test {
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+
+.result {
+    height: 100%;
+    width: 100%;
+    display: none;
+}
