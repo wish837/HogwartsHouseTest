@@ -10,12 +10,17 @@
     <body>
         <div class="container">
             <div class="main" id="main">
-                <button class="go-test" id="goTest">Start</button>
+                <button class="go-test" id="goTest" onclick="js:goTest()">Start</button>
             </div>
-            <div class="test" id="main">
-
+            <div class="test" id="test">
+                <div class="status">
+                    <div class="status-bar" id="statusBar"></div>
+                </div>
+                <img class="main-img" src="asset/img/hat.png">
+                <div class="qusetion-box" id="questionBox"></div>
+                <div class="answer-box" id="answerBox"></div>
             </div>
-            <div class="result" id="main">
+            <div class="result" id="result">
                 <button class="share" id="share">공유하기</button>
             </div>
         </div>
