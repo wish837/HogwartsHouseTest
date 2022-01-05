@@ -6,6 +6,12 @@ const endPoint = 12;
 const select = [];
 
 function calResult() {
+    var pointArray = [
+        { name: 'gryffindor', value: 0, key: 0 },
+        { name: 'hufflepuff', value: 0, key: 1 },
+        { name: 'ravenclaw', value: 0, key: 2 },
+        { name: 'slytherin', value: 0, key: 3 }, 
+    ]
     for(let i = 0; i < endPoint; i++) {
         var target = qnaList[i].a[select[i]];
         for(let j = 0; j < target.length; j++) {
@@ -38,10 +44,8 @@ function addAnswer(answerText, qIdx, idx) {
     var answer = document.createElement('button');
     answer.setAttribute("id", 'answerList');
     answer.classList.add('fadeIn');
-
     a.appendChild(answer);
     answer.innerHTML = answerText;
-
     answer.addEventListener("click", function() {
         var children = document.querySelectorAll('#answerList');
         for (let i = 0; i < children.length; i++) {
@@ -61,7 +65,7 @@ function addAnswer(answerText, qIdx, idx) {
 
 function goNext(qIdx) {
     if (qIdx+1 === endPoint) {
-        calResult();
+        goResult();
         return;
     }
     var q = document.querySelector('#questionBox');
@@ -71,4 +75,17 @@ function goNext(qIdx) {
     }
     var status = document.querySelector('#statusBar');
     status.style.width = (100/endPoint) * (qIdx+1) + '%';
+}
+
+function goResult() {
+    test.style.WebkitAnimation = "fadeOut 1s";
+    test.style.animation = "fadeOut 1s";
+    setTimeout(() => {
+        result.style.WebkitAnimation = "fadeIn 1s";
+        result.style.animation = "fadeIn 1s";
+        setTimeout(() => {
+            test.style.display = "none";
+            result.style.display = "block";
+        }, 450)
+    });
 }
