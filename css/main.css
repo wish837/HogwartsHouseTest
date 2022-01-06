@@ -1,0 +1,20 @@
+.main {
+    height: 100%;
+    width: 100%;
+}
+
+.go-test {
+    all: unset;
+    width: 25%;
+    max-width: 200px;
+    height: 35px;
+    text-align: center;
+    background-color: white;
+    border-radius: 20px;
+    font-weight: 700;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

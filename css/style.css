@@ -16,11 +16,22 @@ html, body {
 }
 
 .container {
-    height: 80%;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container-in {
+    height: 90%;
     width: 80%;
     max-width: 800px;
     margin: auto;
-    background-color: whitesmoke;
+    background-color: rgba(245, 245, 245, 0.7);
     border-radius: 20px;
 }
 
@@ -46,91 +57,4 @@ html, body {
 
 .bgm {
     all: unset;
-}
-
-.main {
-    height: 100%;
-    width: 100%;
-}
-
-.test {
-    height: 100%;
-    width: 100%;
-    display: none;
-}
-
-.result {
-    height: 100%;
-    width: 100%;
-    display: none;
-}
-
-.go-test {
-    all: unset;
-    width: 25%;
-    max-width: 200px;
-    height: 35px;
-    text-align: center;
-    background-color: white;
-    border-radius: 20px;
-    font-weight: 700;
-    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.go-test:active {
-    transform: scale(0.98);
-}
-
-.status {
-    height: 18px;
-    width: 80%;
-    background-color: whitesmoke;
-    border-radius: 20px;
-    margin: auto;
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    max-width: 700px;
-    transform: translate(-50%, -50%);
-}
-
-.status-bar {
-    height: 100%;
-    border-radius: 8px;
-    background: linear-gradient(70deg, rgb(55, 31, 121), rgb(20, 23, 56));
-}
-
-/* 애니메이션 */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes fadeOut {
-    from { opacity: 1; }
-    to { opacity: 0; }
-}
-
-@-webkit-keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@-webkit-keyframes fadeOut {
-    from { opacity: 1; }
-    to { opacity: 0; }
-}
-
-.fadeIn {
-    animation: fadeIn;
-    animation-duration: 0.5s;
-}
-
-.fadeOut {
-    animation: fadeOut;
-    animation-duration: 0.5s;
 }

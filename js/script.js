@@ -42,12 +42,12 @@ function goTest() {
 function addAnswer(answerText, qIdx, idx) {
     var a = document.querySelector('#answerBox');
     var answer = document.createElement('button');
-    answer.setAttribute("id", 'answerList');
+    answer.classList.add('answer-list');
     answer.classList.add('fadeIn');
     a.appendChild(answer);
     answer.innerHTML = answerText;
     answer.addEventListener("click", function() {
-        var children = document.querySelectorAll('#answerList');
+        var children = document.querySelectorAll('.answer-list');
         for (let i = 0; i < children.length; i++) {
             children[i].disabled = true;
             children[i].style.WebkitAnimation = "fadeOut 1s";

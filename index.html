@@ -6,26 +6,32 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>호그와트 기숙사 테스트</title>
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/test.css">
+        <link rel="stylesheet" href="css/result.css">
+        <link rel="stylesheet" href="css/animation.css">
     </head>
     <body>
         <div class="container">
-            <img src="asset/img/hogwarts.jpg" class="background-img" />
-            <img src="asset/img/hat.png" class="main-img" />
-            <audio controls autoplay controls class="bgm">
-                <source src="asset/audio/bgm.mp3" type="audio/mp3" />
-            </audio>
-            <div class="main" id="main">
-                <button class="go-test" id="goTest" onclick="js:goTest()">Start</button>
-            </div>
-            <div class="test" id="test">
-                <div class="status">
-                    <div class="status-bar" id="statusBar"></div>
+            <div class="container-in">
+                <img src="asset/img/hogwarts.jpg" class="background-img" />
+                <img src="asset/img/hat.png" class="main-img" />
+                <audio controls autoplay controls class="bgm">
+                    <source src="asset/audio/bgm.mp3" type="audio/mp3" />
+                </audio>
+                <div class="main" id="main">
+                    <button class="go-test" id="goTest" onclick="js:goTest()">Start</button>
                 </div>
-                <div class="qusetion-box" id="questionBox"></div>
-                <div class="answer-box" id="answerBox"></div>
-            </div>
-            <div class="result" id="result">
-                <button class="share" id="share">공유하기</button>
+                <div class="test" id="test">
+                    <div class="status">
+                        <div class="status-bar" id="statusBar"></div>
+                    </div>
+                    <div class="qusetion-box" id="questionBox"></div>
+                    <div class="answer-box" id="answerBox"></div>
+                </div>
+                <div class="result" id="result">
+                    <button class="share" id="share">공유하기</button>
+                </div>
             </div>
         </div>
         <script src="js/data.js"></script>
