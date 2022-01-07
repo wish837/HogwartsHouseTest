@@ -14,8 +14,8 @@ function calResult() {
     ]
     for(let i = 0; i < endPoint; i++) {
         var target = qnaList[i].a[select[i]];
-        for(let j = 0; j < target.length; j++) {
-            for(let k = 0; k < pointArray.length; k++) {
+        for (let j = 0; j < target.length; j++) {
+            for (let k = 0; k < pointArray.length; k++) {
                 if(target.type[j] === pointArray[k].name) {
                     pointArray[k].value += 1;
                 }
@@ -64,13 +64,19 @@ function addAnswer(answerText, qIdx, idx) {
 }
 
 function goNext(qIdx) {
+    var mainImg = document.querySelector("#mainImg");
     if (qIdx+1 === endPoint) {
+        mainImg.style.WebkitAnimation = "fadeOut 1s";
+        mainImg.style.animation = "fadeOut 1s";
+        setTimeout(() => {
+            mainImg.style.display = "none";
+        }, 450);
         goResult();
         return;
     }
     var q = document.querySelector('#questionBox');
     q.innerHTML = qnaList[qIdx].q;
-    for(let i in qnaList[qIdx].a) {
+    for (let i in qnaList[qIdx].a) {
         addAnswer(qnaList[qIdx].a[i].answer, qIdx, i);
     }
     var status = document.querySelector('#statusBar');
