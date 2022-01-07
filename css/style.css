@@ -29,7 +29,7 @@ html, body {
 .container-in {
     height: 90%;
     width: 80%;
-    max-width: 800px;
+    max-width: 500px;
     margin: auto;
     background-color: rgba(245, 245, 245, 0.7);
     border-radius: 20px;
