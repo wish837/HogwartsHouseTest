@@ -5,7 +5,6 @@ const endPoint = 12;
 const select = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
 function calResult() {
-    console.log(select);
     var result = select.indexOf(Math.max(...select));
     return result;
 }
@@ -87,7 +86,6 @@ function goNext(qIdx) {
     var status = document.querySelector('#statusBar');
     status.style.width = (100/endPoint) * (qIdx+1) + '%';
 }
-
 
 function goTest() {
     main.style.WebkitAnimation = "fadeOut 1s";
